@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "pal_log.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,6 +93,11 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  
+  printf("DEFAULT_OUTPUT\r\n");
+  PAL_LOG(PAL_LOG_LEVEL_ERROR,"PAL_LOG_LEVEL_ERROR");
+  PAL_LOG(PAL_LOG_LEVEL_INFO,"PAL_LOG_LEVEL_INFO");
+  PAL_LOG(PAL_LOG_LEVEL_DEBUG,"PAL_LOG_LEVEL_DEBUG");
 
   /* USER CODE END 2 */
 
