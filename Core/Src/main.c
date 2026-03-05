@@ -24,6 +24,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "pal_log.h"
+
+#include "bsp_dwt.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,7 +96,10 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   
+  BSP_DWT_Init();
+  
   printf("DEFAULT_OUTPUT\r\n");
+  BSP_DWT_DelayMs(1000);
   PAL_LOG(PAL_LOG_LEVEL_ERROR,"PAL_LOG_LEVEL_ERROR");
   PAL_LOG(PAL_LOG_LEVEL_INFO,"PAL_LOG_LEVEL_INFO");
   PAL_LOG(PAL_LOG_LEVEL_DEBUG,"PAL_LOG_LEVEL_DEBUG");
